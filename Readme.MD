@@ -102,6 +102,22 @@ Dictionary in Python is an ordered (since Py 3.7) [unordered (Py 3.6 & prior)] c
 ```
 my_dict = {“a”: 1, “b”: 2, “c”: 3}
 ```
+11. Differentiate between List and Tuple?
+
+```
+List
+
+Lists are Mutable datatype.
+Lists consume more memory
+The list is better for performing operations, such as insertion and deletion.
+The implication of iterations is Time-consuming
+Tuple
+
+Tuples are Immutable datatype.
+Tuple consumes less memory as compared to the list
+A Tuple data type is appropriate for accessing the elements
+The implication of iterations is comparatively Faster
+```
 
 Cloud:
 Google Cloud
