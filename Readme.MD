@@ -133,6 +133,7 @@ print ("Current time is", currenttime)
 Google Cloud
 
 https://medium.com/@thecloudarchitect/my-devops-notes-for-gcp-scenario-based-interview-questions-with-answer-e71381c22afa
+https://www.igmguru.com/blog/gcp-interview-questions
 
 # Orchestration Tools:
 Docker
