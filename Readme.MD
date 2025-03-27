@@ -185,5 +185,7 @@ Post Mortem
 
 # CI/CD
 - FluxCD
+https://github.com/fluxcd/flux2-kustomize-helm-example
 - GitOps
+https://cloudsoftsol.com/interview-questions/top-gitops-interview-questions-and-answers-for-devops-engineers/
 
