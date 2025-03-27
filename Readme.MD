@@ -190,3 +190,16 @@ https://github.com/fluxcd/flux2-kustomize-helm-example
 - GitOps
 https://cloudsoftsol.com/interview-questions/top-gitops-interview-questions-and-answers-for-devops-engineers/
 
+
+# Networking
+https://www.geeksforgeeks.org/computer-network-cheat-sheet/?ref=lbp
+
+# Storage
+SAN & NAS
+
+NFS
+SMB
+
+https://www.acte.in/netapp-interview-questions-and-answers
+
+
