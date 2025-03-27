@@ -194,6 +194,8 @@ https://cloudsoftsol.com/interview-questions/top-gitops-interview-questions-and-
 # Networking
 https://www.geeksforgeeks.org/computer-network-cheat-sheet/?ref=lbp
 
+https://www.geeksforgeeks.org/tcp-3-way-handshake-process/
+
 # Storage
 SAN & NAS
 
