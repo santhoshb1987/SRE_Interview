@@ -29,9 +29,11 @@ print(F_num)
 Pass statement in Python is a null operation or a placeholder.
 ```
 
-5.What is a lambda function?
+5. What is a lambda function?
+
 A lambda function is an anonymous function. 
 This function can have any number of parameters but, can have just one statement.
+
 ```
 s1 = 'GeeksforGeeks'
 
