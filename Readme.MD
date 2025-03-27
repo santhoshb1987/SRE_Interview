@@ -127,35 +127,38 @@ print ("Current time is", currenttime)
 ```
 
 
-Cloud:
+# Cloud:
 Google Cloud
 
 
-Orchestration Tools:
+# Orchestration Tools:
 Docker
 Kubernetes
 
+# IaaC Tools
 Terraform
 
+# Configuration Management Tools
 Ansible 
 
+# Operating System
 Linux
 
 
-Operations:
+# Operations:
 Observability 
 - Prometheus 
 - Otel 
 - Google Stack Driver logging 
 - Alerting 
 
-Oncall 
+# Oncall 
 Pagerduty/Slack Integration
 oncall rotation 
 RCA
 Post Mortem 
 
-Database:
+# Database:
 - Postgres
 - Backup & Restore strategies 
 - logging 
@@ -164,4 +167,7 @@ Database:
 - SChema /permissions 
 - Onprem/Managed Database Service 
 
+# CI/CD
+- FluxCD
+- GitOps
 
