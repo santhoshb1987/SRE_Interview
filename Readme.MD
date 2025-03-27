@@ -15,6 +15,9 @@ Statically typed languages: In this type of language, the data type of a variabl
 Dynamically typed languages: These are the languages that do not require any pre-defined data type for any variable as it is interpreted at runtime by the machine itself. In these languages, interpreters assign the data type to a variable at runtime depending on its value. Examples are Python and JavaScript
 ```
 3. What is the difference between a Mutable datatype and an Immutable data type?
+Mutable data types can be edited i.e., they can change at runtime. Eg – List, Dictionary, etc.
+Immutable data types can not be edited i.e., they can not change at runtime. Eg – String, Tuple, etc.
+
 4. How do you floor a number in Python?
 ```
 import math
