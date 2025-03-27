@@ -165,7 +165,7 @@ Observability
 - Prometheus 
 https://www.devopsschool.com/blog/top-50-prometheus-interview-questions-and-answers/
 - Otel Monitoring
-- Google Stack Driver logging 
+- Google Stack Driver logging /Metrics Explorer
 - Alerting 
 
 # Oncall 
@@ -173,6 +173,7 @@ Pagerduty/Slack Integration
 oncall rotation 
 RCA
 Post Mortem 
+slack - bot intergrations
 
 # Database:
 - Postgres
