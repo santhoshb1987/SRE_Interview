@@ -118,6 +118,14 @@ Tuple consumes less memory as compared to the list
 A Tuple data type is appropriate for accessing the elements
 The implication of iterations is comparatively Faster
 ```
+12. Write a code to display the current time?
+```
+import time
+
+currenttime= time.localtime(time.time())
+print ("Current time is", currenttime)
+```
+
 
 Cloud:
 Google Cloud
