@@ -148,7 +148,7 @@ Linux
 # Operations:
 Observability 
 - Prometheus 
-- Otel 
+- Otel Monitoring
 - Google Stack Driver logging 
 - Alerting 
 
@@ -164,7 +164,7 @@ Post Mortem
 - logging 
 - Transactions/ Performamce 
 - Indexing 
-- SChema /permissions 
+- Schema /permissions 
 - Onprem/Managed Database Service 
 
 # CI/CD
