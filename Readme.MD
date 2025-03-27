@@ -40,7 +40,7 @@ s1 = 'GeeksforGeeks'
 s2 = lambda func: func.upper()
 print(s2(s1))
 ```
-6. 15. How is a dictionary different from a list?
+6. How is a dictionary different from a list?
 ```
 A list is an ordered collection of items accessed by their index, while a dictionary is an unordered collection of key-value pairs accessed using unique keys. 
 Lists are ideal for sequential data, whereas dictionaries are better for associative data. 
