@@ -137,21 +137,33 @@ https://www.igmguru.com/blog/gcp-interview-questions
 
 # Orchestration Tools:
 Docker
+
+https://www.linkedin.com/pulse/day-21-docker-important-interview-questions-kartik-bhatt-xp5pc
+
+Learning Tutorial: https://www.simplilearn.com/tutorials/docker-tutorial
+
 Kubernetes
+https://www.geeksforgeeks.org/kubernetes-interview-questions/
 
 # IaaC Tools
+
 Terraform
+https://www.geeksforgeeks.org/terraform-interview-questions/
 
 # Configuration Management Tools
+
 Ansible 
+https://www.interviewbit.com/ansible-interview-questions/
 
 # Operating System
-Linux
 
+Linux
+https://www.geeksforgeeks.org/linux-interview-questions/
 
 # Operations:
 Observability 
 - Prometheus 
+https://www.devopsschool.com/blog/top-50-prometheus-interview-questions-and-answers/
 - Otel Monitoring
 - Google Stack Driver logging 
 - Alerting 
