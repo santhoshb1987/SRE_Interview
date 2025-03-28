@@ -187,6 +187,38 @@ Learning Tutorial: https://www.simplilearn.com/tutorials/docker-tutorial
 Kubernetes
 https://www.geeksforgeeks.org/kubernetes-interview-questions/
 
+1. Explain Kubernetes Architecture?
+```
+Kubernetes is an open-source container deployment and administration platform. It offers container orchestration, container runtime, container-centric infrastructure orchestration, balance of load, self-healing mechanisms, and service discovery. A Kubernetes cluster has several control planes and one or more worker nodes.
+```
+2. What is a Pod in Kubernetes?
+```
+A cluster of one or more Linux containers makes up a Kubernetes pod, the smallest unit of a Kubernetes application.
+```
+3. What is Kubelet?
+```
+Kubelet is an important component of Kubernetes that manages containers within pods on a node. It registers the node with the control plane and provides resource information. Kubelet keeps an eye on container health and responds to problems—lik isnces of pods that contain a containerized application.
+```
+4. What is a Service in Kubernetes?
+
+```
+The idea of the Service is to group a set of Pod endpoints into a single resource. We can configure various ways to access the grouping. By default, we can get a stable cluster IP address that the clients inside the cluster can use to contact Pods in Service.
+
+apiVersion: v1
+kind: Service
+metadata:
+name: my-service
+spec:
+    selector:
+        Tomcat: deploymentapp
+    ports:
+        - protocol: TCP
+          port: 80
+          targetPort: 8080
+```
+5. 
+
+
 # Version Control Tools
 Git
 1. What is the difference between git fetch and git pull?
