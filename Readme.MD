@@ -135,6 +135,48 @@ Google Cloud
 https://medium.com/@thecloudarchitect/my-devops-notes-for-gcp-scenario-based-interview-questions-with-answer-e71381c22afa
 https://www.igmguru.com/blog/gcp-interview-questions
 
+1. How do you manage secrets in GCP?
+```
+Ans: Manage secrets in GCP using Secret Manager. Store sensitive information such as API keys, passwords, and tokens securely.
+```
+2. How do you monitor applications in GCP?
+```
+Ans: Monitor applications in GCP using Google Cloud’s operations suite, including Cloud Monitoring, Cloud Logging, and Cloud Trace. Set up metrics, create dashboards, configure alerts, and analyze logs to ensure the health and performance of your applications.
+```
+3. How do you implement blue-green deployments in GCP?
+```
+Ans: Implement blue-green deployments in GCP by setting up two identical environments. Deploy the new version to the blue environment, test it, and switch traffic from the green (current production) environment to the blue environment using Cloud Load Balancer or DNS updates.
+```
+4. How do you secure a GKE cluster?
+```
+Ans: Secure a GKE cluster by implementing best practices such as enabling private clusters, using network policies to control traffic, setting up role-based access control (RBAC), enabling binary authorization for container images, and regularly updating the cluster and node software.
+```
+5. How do you set up network security in GCP?
+```
+Ans: Set up network security in GCP by configuring VPCs, subnets, firewall rules, and Cloud Armor policies. Use Identity-Aware Proxy (IAP) to control access to your applications, and implement secure access using VPNs or Cloud Interconnect.
+```
+6. How do you use Stackdriver Logging in GCP?
+```
+Ans: Use Stackdriver Logging (now part of Cloud Logging) to collect and analyze logs from your applications and GCP services. Create log-based metrics, set up alerts, and use log sinks to export logs to BigQuery or Cloud Storage for further analysis.
+```
+7. How do you handle disaster recovery in GCP?
+```
+Ans: Handle disaster recovery in GCP by implementing backup and restore strategies using Cloud Storage, Cloud SQL, and other managed services. Use multi-region storage for data redundancy, set up failover mechanisms, and test your disaster recovery plans regularly.
+```
+8. How do you manage service accounts in GCP?
+```
+Ans: Manage service accounts in GCP by creating service accounts for applications and services that need to access GCP resources. Assign appropriate IAM roles to service accounts, and use service account keys for authentication when necessary. Rotate keys regularly and follow the principle of least privilege.
+```
+9. How do you use Cloud Scheduler in GCP?
+```
+Ans: Use Cloud Scheduler to trigger jobs at specified times or intervals. Schedule tasks such as HTTP requests, Pub/Sub messages, or Cloud Functions executions
+```
+
+10. How do you secure data in transit and at rest in GCP?
+```
+Ans: Secure data in transit by using TLS/SSL for communication between services and encrypt data at rest using Cloud KMS for key management. Enable encryption for storage services like Cloud Storage, BigQuery, and Cloud SQL, and manage encryption keys with IAM policies.
+```
+
 # Orchestration Tools:
 Docker
 
