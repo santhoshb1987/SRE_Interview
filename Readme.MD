@@ -262,7 +262,7 @@ terraform workspace list #To list all workpace
 terraform workspace new dev 
 terraform workspace new prod
 
-#Switching Between Workspaces 
+Switching Between Workspaces 
 
 terraform workspace select <workspace_name> 
 ```
@@ -270,7 +270,7 @@ terraform workspace select <workspace_name>
 4. Question 3: Describe a situation where you might need to use the terraform remote backend, and what advantages does it offer in state management?
 ```
 Benefits: Shared state, locking, secure state storage.
-``
+```
 
 5. Question 4: You need to create a highly available architecture in AWS using Terraform. Explain how you would implement an Auto Scaling Group with load balancing.
 ```
