@@ -213,7 +213,7 @@ https://www.devopsschool.com/blog/top-50-prometheus-interview-questions-and-answ
 # Oncall 
 Pagerduty/Slack Integration
 oncall rotation 
-RCA
+RCA 5 Whys + Dealing with PO P1 issues/ Runbooks
 Post Mortem 
 slack - bot intergrations
 
@@ -243,6 +243,9 @@ SAN & NAS
 
 NFS
 SMB
+
+Active Directory/ Domain Name/ Name Server 
+
 
 https://www.acte.in/netapp-interview-questions-and-answers
 
