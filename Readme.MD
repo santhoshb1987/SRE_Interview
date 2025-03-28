@@ -187,15 +187,184 @@ Learning Tutorial: https://www.simplilearn.com/tutorials/docker-tutorial
 Kubernetes
 https://www.geeksforgeeks.org/kubernetes-interview-questions/
 
+# Version Control Tools
+Git
+1. What is the difference between git fetch and git pull?
+```
+The main difference between git fetch and git pull lies in what they do and how they update the local repository.
+
+The git fetch command retrieves changes from a remote repository to the local repository. It updates the remote-tracking branches (e.g., origin/master) in the local repository to reflect the state of the remote repository, but it does not update the working directory or merge any changes into the current branch. This means that after fetching, you can review the changes made in the remote repository without affecting your local work.
+
+The git pull command also retrieves changes from a remote repository, but it goes a step further by fetching changes and merging them into the current branch in one step. It essentially performs a git fetch followed by a git merge to incorporate the changes from the remote repository into the current branch.
+```
+2. How do you revert a commit that has already been pushed and made public?
+```
+The git revert <commit-hash> command can be used to revert a commit.
+Identify the commit you want to revert to by finding its commit hash. This can be done using the git log command to view the commit history and find the commit hash you want to revert.
+Once you have the commit hash, use the git revert command followed by the commit hash to create a new commit that undoes the changes introduced by the specified commit. For example:
+
+git revert <commit-hash>
+```
+3. What does git reset do?
+```
+The git reset command resets the current HEAD to a specified state. This means it can be used to undo changes, unstage files, or move the HEAD pointer to a different commit.
+```
+
+4. What is git stash?
+```
+git stash is a Git command that temporarily stores changes in the working directory that are not ready to be committed. It allows developers to save their modifications without committing them to the repository.
+```
+
+5. What is the use of git submodule and how do you update one?
+```
+The git submodule command manages external dependencies within a Git repository. It allows you to include external repositories as submodules within your main repository. This is useful when you want to incorporate code from external sources while keeping it separate from your main project's codebase.
+```
+6. Can you name some deployment strategies?
+```
+Regular release/deployment: releases software to everyone at once, making it available to the general public.
+
+Canary releases: this is a method that reduces the chance of failure by exposing a small portion of the userbase (around 1%) to the release. With a canary release, developers gradually switch users to the latest release in a controlled way.
+
+Blue-green releases: consists of running two simultaneous instances of an application; one is the stable version currently serving users and the other the latest release. Users are switched from the former to the latter all at once. This method is safer than the regular or big bang releases because users can instantly be routed back to the previous version if there is a problem.
+
+Dark launches: are deployments where new features are released without being announced. Features can be enabled in a very fine-grained way with feature flags.
+```
 # IaaC Tools
 
 Terraform
 https://www.geeksforgeeks.org/terraform-interview-questions/
 
+1. What are the most useful Terraform commands?
+```
+terraform init — Initializes the current directory, also Plugin Installation, Module Installation, Backend Initialization, and Version Checking is done in the background.
+terraform refresh — Terraform compares the current state of your infrastructure with the state described in your Terraform configuration files and updates its state file accordingly.
+terraform output — Retrieve the values of output variables defined in your Terraform configuration.
+terraform apply — Terraform to apply the changes described in your Terraform configuration files to your infrastructure.
+terraform destroy — Terraform is used to destroy all the resources defined in your Terraform configuration.
+terraform graph — Creates a DOT-formatted graph
+terraform plan — Terraform is used to generate an execution plan based on your Terraform configuration files.
+```
+2. Question 1: You have an existing infrastructure on AWS, and you need to use Terraform to manage it. 
+
+How would you import these resources into your Terraform configuration?
+We can use the terraform import command, we need to create a configuration file (dummy file)
+```
+terraform import [OPTION] ADDRESS_ID 
+
+terraform import aws_instance.localname i-abcd123 
+```
+3. Question 2: You are working with multiple environments (e.g., dev, prod) and want to avoid duplicating code. How would you structure your Terraform configurations to achieve code reuse?
+```
+We make use of modules so that we can avoid duplication of code.
+
+terraform workspace list #To list all workpace 
+
+terraform workspace new dev 
+terraform workspace new prod
+
+#Switching Between Workspaces 
+
+terraform workspace select <workspace_name> 
+```
+
+4. Question 3: Describe a situation where you might need to use the terraform remote backend, and what advantages does it offer in state management?
+```
+Benefits: Shared state, locking, secure state storage.
+``
+
+5. Question 4: You need to create a highly available architecture in AWS using Terraform. Explain how you would implement an Auto Scaling Group with load balancing.
+```
+Define Load Balancer Resources:
+resource "aws_lb" "example" {
+  name               = "example-lb"
+  internal           = false
+  load_balancer_type = "application"
+
+  security_groups    = ["${aws_security_group.example.id}"]
+
+  subnets            = ["${aws_subnet.example.id}"]
+}
+
+
+resource "aws_lb_target_group" "example" {
+  name        = "example-tg"
+  port        = 80
+  protocol    = "HTTP"
+  target_type = "instance"
+
+  health_check {
+    path                = "/"
+    interval            = 30
+    timeout             = 5
+    healthy_threshold   = 2
+    unhealthy_threshold = 2
+  }
+
+  vpc_id = "${aws_vpc.example.id}"
+}
+Define Auto Scaling Group:
+resource "aws_autoscaling_group" "example" {
+  name                 = "example-asg"
+  min_size             = 2
+  max_size             = 5
+  desired_capacity     = 2
+  vpc_zone_identifier  = ["${aws_subnet.example.id}"]
+
+  target_group_arns = ["${aws_lb_target_group.example.arn}"]
+}
+Attach ASG to Load Balancer:
+resource "aws_autoscaling_attachment" "example" {
+  autoscaling_group_name = "${aws_autoscaling_group.example.name}"
+  alb_target_group_arn   = "${aws_lb_target_group.example.arn}"
+}
+
+```
+6. Question 5: Your team is adopting a multi-cloud strategy, and you need to manage resources on both AWS and Azure using Terraform. How would you structure your Terraform code to handle this?
+Organize Directories by Cloud Provider:
+```
+terraform_project/
+├── aws/
+│   ├── main.tf
+│   ├── variables.tf
+│   ├── outputs.tf
+├── azure/
+│   ├── main.tf
+│   ├── variables.tf
+│   ├── outputs.tf
+└── modules/
+    ├── aws_module/
+    │   ├── main.tf
+    │   ├── variables.tf
+    │   ├── outputs.tf
+    ├── azure_module/
+    │   ├── main.tf
+    │   ├── variables.tf
+    │   ├── outputs.tf
+```
+
 # Configuration Management Tools
 
 Ansible 
 https://www.interviewbit.com/ansible-interview-questions/
+https://k21academy.com/devops-job-bootcamp/ansible-interview-questions-and-answers/
+
+1. What is idempotence in Ansible?
+```
+Idempotence in Ansible refers to the ability of tasks to be executed multiple times without changing the result beyond the initial execution, ensuring consistent outcomes.
+```
+2. What are Ansible ad-hoc commands?
+```
+Ansible ad-hoc commands are one-liners used to perform simple tasks without writing playbooks. They are executed from the command line and allow tasks like running shell commands or restarting services.
+```
+3. How do you handle errors in Ansible playbooks?
+```
+Ansible provides mechanisms for error handling, including the ignore_errors directive, failed_when condition, and rescue blocks, ensuring graceful handling of errors during playbook execution.
+```
+4. How do you securely manage sensitive data like passwords and API keys in Ansible playbooks without using Ansible Vault?
+```
+Securely managing sensitive data in Ansible playbooks can be achieved using external credential management solutions like HashiCorp Vault or external password management systems.
+These solutions integrate with Ansible to securely retrieve and manage sensitive information.
+```
 
 # Operating System
 
